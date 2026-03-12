@@ -1,166 +1,252 @@
+/* 
+    general styles to the whole site
+ */
+
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  box-sizing: border-box; /* Includes padding and border inside element width */
+  margin: 0; /* Removes default margins */
+  padding: 0; /* Removes default padding */
 }
 
 body {
-  font-family: 'Segoe UI', Arial, sans-serif; /* Set a modern, clean font for the website */
-  background: #f4f6f9; /* Light background color for a clean look */
-  color: #333; /* Dark text color for better readability */
-  line-height: 1.6; /* Increase line height for better readability */
-  text-align: center;
+  font-family: 'Segoe UI', Arial, sans-serif; /* Clean modern font */
+  background: #f4f6f9; /*  background for the page */
+  color: #333; /*  text colour  */
+  line-height: 1.6; /*  spacing between lines of text */
+  text-align: center; /* Centers  page content */
+  padding-bottom: 40px; /* Adds space at the bottom of the page */
 }
 
 
-nav h1 {
-  color: white;
+/* 
+    main navigation menu
+ */
+
+nav {
+  background-color: #111;
+  padding: 15px 40px;
+  display: flex;
+  align-items: center;
+  gap: 40px; /* controls spacing between items */
 }
 
 .nav-links {
   display: flex;
-  gap: 20px;
+  gap: 25px;
   list-style: none;
+  margin-left: auto; /* pushes links to the right */
 }
 
-.nav-links a {
-  color: white;
-  text-decoration: none;
-}
-
-.nav-links a:hover {
-  color: #00bcd4;
-}
-
+/* Website title inside navigation bar */
 nav h1 {
   font-size: 24px;
-  letter-spacing: 1px;
 }
+
+/* Logo link styling */
 .logo {
-  color: white;
-  text-decoration: none;
+  color: white; /* White text */
+  text-decoration: none; /* Removes underline */
 }
 
+/* Logo hover effect */
 .logo:hover {
-  color: #00bcd4;
+  color: #00bcd4; /* Changes colour when mouse hovers */
 }
 
+/* Navigation links list */
 nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+  list-style: none; /* Removes bullet points */
+  display: flex; /* Places links horizontally */
+  gap: 25px; /* Space between links */
 }
 
-/* Style the navigation links with a modern look and smooth hover effect */
+/* Navigation links */
 nav a {
   color: white;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s;
+  transition: color 0.3s; /* Smooth hover transition */
 }
 
-/* Add a hover effect to the navigation links for better interactivity */
+/* Navigation hover effect */
 nav a:hover {
   color: #00d4ff;
 }
 
-/* Style the main heading and paragraphs with a modern, clean look */
+
+/* 
+SEARCH BAR
+   
+ */
+
+.search-form {
+  display: flex; /* Places input and button side by side */
+  gap: 5px; /* Small space between them */
+}
+
+/* Search input field */
+.search-form input {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: none;
+  font-size: 14px;
+}
+
+/* Search button */
+.search-form button {
+  padding: 3px 8px;
+  border: none;
+  background-color: #00bcd4;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Search button hover effect */
+.search-form button:hover {
+  background-color: #0097a7;
+}
+
+
+/* 
+   
+ headings and paragraphs
+ */
+
+/*  headings */
 h2 {
-  margin-top: 40px;
-  text-align: center;
+  margin-top: 40px; /* Space above heading */
   font-size: 32px;
 }
 
+/* Paragraph  */
 p {
-  text-align: center;
-  margin: 10px 0 20px;
+  margin: 10px 0 20px; /* Space around paragraphs */
 }
 
-/* Style the buttons with a vibrant gradient and smooth hover effect */
+
+strong {
+  display: block; /* Makes it appear on a new line */
+  font-size: 22px;
+  margin: 20px 0;
+}
+
+
+/* 
+   BUTTONS
+*/
+
 .btn {
-  background: linear-gradient(135deg, #007bff, #00d4ff);
-  color: white;
+  background: linear-gradient(135deg, #007bff, #00d4ff); /* Blue gradient background */
+  color: white; /* White text */
   padding: 12px 20px;
-  border-radius: 75px;
-  text-decoration: none;
+  border-radius: 75px; /* Rounded button shape */
+  text-decoration: none; /* Removes underline for links */
   border: none;
-  cursor: pointer;
+  cursor: pointer; /* Pointer cursor on hover */
   display: inline-block;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover animation */
 }
 
+/* Button hover  */
 .btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px); /* Slight upward movement */
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2); /* Adds shadow */
 }
 
-
+/* Centers button links */
 a.btn {
   display: block;
   width: fit-content;
   margin: 0 auto;
 }
 
+
+/*
+    products shown on the products page
+ */
+
 .product {
   background: white;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Soft shadow */
   padding: 20px;
   width: 250px;
-  margin: 20px;
+  margin: 30px;
+  display: inline-block; /* Allows products to sit horizontally */
   text-align: center;
-  display: inline-block;   /* This makes them go horizontally */
+  transition: transform 0.3s; /* Smooth hover animation */
 }
 
+/* hover effect */
 .product:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Slightly enlarges the product card */
 }
 
+/* Product images */
 .product img {
   width: 100%;
-  height: 200px;        
-  object-fit: cover;    
-  border-radius: 8px;   
+  height: 200px;
+  object-fit: cover; /* Ensures images fill space nicely */
+  border-radius: 8px;
 }
 
+/* Product view page image */
 .product-view img {
-  width: 600px;      
-  height: 500px;     
-  object-fit: cover; 
+  width: 600px;
+  height: 500px;
+  object-fit: cover;
   display: block;
   margin: 20px auto;
   border-radius: 12px;
 }
 
- /* Style the product name and price with a modern look */
+
+/* 
+  cart table layout
+ */
+
 table {
-  width: 80%;
-  margin: 40px auto;
-  border-collapse: collapse;
+  width: 80%; /* Table width */
+  margin: 40px auto; /* Centers table */
+  border-collapse: collapse; /* Removes spacing between borders */
   background: white;
   border-radius: 10px;
   overflow: hidden;
 }
 
+/* Table headings */
 th {
   background: #2c5364;
   color: white;
   padding: 15px;
 }
 
+/* Table cells */
 td {
   padding: 15px;
-  text-align: center;
   border-bottom: 1px solid #ddd;
 }
 
-
-strong {
-  display: block;
-  text-align: center;
-  font-size: 22px;
-  margin: 20px 0;
+/* Alternating row colours */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
+
+
+/* Cart product image */
+
+.cart-img {
+  width: 80px;
+  height: auto;
+  object-fit: contain;
+}
+
+
+/* 
+FORMS 
+   */
+
 form {
   width: 400px;
   margin: 40px auto;
@@ -170,7 +256,9 @@ form {
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-input, textarea {
+/* Input fields and text areas */
+input,
+textarea {
   width: 100%;
   padding: 12px;
   margin-bottom: 15px;
@@ -178,76 +266,22 @@ input, textarea {
   border: 1px solid #ccc;
 }
 
+/* Text area specific styling */
 textarea {
-  resize: none;
+  resize: none; /* Prevents resizing */
   height: 120px;
 }
 
-.cart-img {
-  width: 80px;
-  height: auto;
-  object-fit: contain;
-}
 
-nav {
-  background-color: #111;
-  padding: 15px 20px;
-  display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: center;
-}
+/* 
+    FOOTER
+  
+ */
 
-/* Website title */
-nav h1 {
+footer {
+  background: #111;
   color: white;
-  margin-bottom: 10px;
-}
-
-/* Search Bar */
-.search-form {
-  display: flex;
-  gap: 5px;
-  margin-bottom: 2px;
-}
-
-.search-form input {
-  padding: 4px 8px;   /* Smaller vertical padding */
-  height: 20px;      /* Controls height */
-  border-radius: 4px;
-  border: none;
-  font-size: 14px;
-}
-
-.search-form button {
-  padding: 4px 10px;  /* Smaller button */
-  height: 28px;
-  border: none;
-  background-color: #00bcd4;
-  color: white;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.search-form button:hover {
-  background-color: #0097a7;
-}
-
-/* Navigation Links */
-.nav-links {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-}
-
-.nav-links a:hover {
-  color: #00bcd4;
+  padding: 20px;
+  margin-top: 50px;
 }
 
