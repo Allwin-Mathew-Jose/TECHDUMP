@@ -38,10 +38,11 @@ nav {
 }
 
 /* Website title inside navigation bar */
-nav h1 {
-  font-size: 24px;
-}
 
+.logo {
+  height: 120px; /* Controls logo size */
+  width: auto;
+}
 /* Logo link styling */
 .logo {
   color: white; /* White text */
