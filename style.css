@@ -9,6 +9,7 @@ body {
   background: #f4f6f9; /* Light background color for a clean look */
   color: #333; /* Dark text color for better readability */
   line-height: 1.6; /* Increase line height for better readability */
+  text-align: center;
 }
 
 
@@ -100,16 +101,15 @@ a.btn {
   margin: 0 auto;
 }
 
- /* Style the product cards with a clean design, subtle shadow, and smooth hover effect */
 .product {
   background: white;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   padding: 20px;
   width: 250px;
-  margin: 40px auto;
+  margin: 20px;
   text-align: center;
-  transition: transform 0.3s;
+  display: inline-block;   /* This makes them go horizontally */
 }
 
 .product:hover {
@@ -250,3 +250,4 @@ nav h1 {
 .nav-links a:hover {
   color: #00bcd4;
 }
+
